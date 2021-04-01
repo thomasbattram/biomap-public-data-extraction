@@ -1,0 +1,2 @@
+Accession	Title	Type	Organism	Assays	Release Date	Processed Data	Raw Data	Present in Atlas	ArrayExpress URL
+E-GEOD-35582	The characteristics of genome-wide DNA methylation in naïve CD4+ T cells of patients with psoriasis and atopic dermatitis	methylation profiling by high throughput sequencing	Homo sapiens	3	2012-03-17	https://www.ebi.ac.uk/arrayexpress/files/E-GEOD-35582/processed/	Data is not available		https://www.ebi.ac.uk/arrayexpress/experiments/E-GEOD-35582/
