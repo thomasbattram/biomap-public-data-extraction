@@ -31,9 +31,6 @@ datasets <- as_tibble(datasets)
 # Search for eczema and psoriasis data
 # --------------------------------------------------------------------
 
-# filter based on sample size
-filt_datasets <- datasets[datasets$samples > 50, ]
-
 ad_terms <- c("eczema", "atopic", "dermatitis", "rash")
 pso_terms <- c("psoriasis", "pso", "rash")
 
@@ -87,6 +84,7 @@ pso_pmids <- extract_pmid_from_series(pso_data$filenames[1])
 test_f <- pso_data$filenames[1]
 samples <- geograbi.get.samples(filename = test_f)
 chr <- geograbi.extract.characteristics(samples)
+chr$sample_name <- samples$geo_accession
 
 extract_contact <- function(sample_df)
 {
@@ -105,13 +103,14 @@ all_dat <- lapply(1:nrow(pso_data), function(x) {
 	dat_samples <- geograbi.get.samples(filename = dat$filenames)
 	## get phenotype data
 	chr <- geograbi.extract.characteristics(dat_samples)
+	chr$sample_name <- dat_samples$geo_accession
 	## extract tissue information if present
 	tiss <- unique(chr[, grep("tissue", colnames(chr), ignore.case = T), drop = T])
 	tiss <- ifelse(class(tiss) == "data.frame", "FILL ME", tiss)
 	## put together study data as is done for the spreadsheet "public_available_template.xlsx"
 	out_dat <- dat %>%
 		mutate(pi_contact = "", 
-			   data_contact = extract_contact(dat_samples), 
+			   data_contact = paste(extract_contact(dat_samples), "CHECK ME"), 
 			   contacted_by = "", 
 			   study_name = "", 
 			   pmid = extract_pmid_from_series(dat$filenames), 
