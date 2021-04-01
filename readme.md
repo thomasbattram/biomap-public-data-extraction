@@ -1,10 +1,22 @@
 # Publicly available data for BIOMAP analyses
 
-To increase the number of samples available for analyses the databases housing publicly available data will be checked. These include: [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/), [European Genome-phenome Archive](https://www.ebi.ac.uk/ega/home), and [dbGaP](https://www.ncbi.nlm.nih.gov/gap/). 
+To increase the number of samples available for analyses the databases housing publicly available data will be checked. These include: [GEO](https://www.ncbi.nlm.nih.gov/geo/), [ArrayExpress](https://www.ebi.ac.uk/arrayexpress/), [European Genome-phenome Archive](https://www.ebi.ac.uk/ega/home), and [dbGaP](https://www.ncbi.nlm.nih.gov/gap/). 
 
 Below describes querying of those databases, the results of those queries and the data to download.
 
 __NOTE:__ Antonio et al. also conducted a search of publicly available datasets and processed the data as seen in this paper: [Manually curated and harmonised transcriptomics datasets of psoriasis and atopic dermatitis patients](https://www.nature.com/articles/s41597-020-00696-8). The curated data can be found here: [https://zenodo.org/record/4009497](https://zenodo.org/record/4009497). These data are only transcriptomic.
+
+## GEO
+
+Date of last search: 2021-04-01
+
+Two scripts were used in the search:
+1. [search-geo.R](scripts/search-geo.R) - This script involves the [geograbi](https://github.com/yousefi138/geograbi) R package to extract data and do some pre-lim filtering. It produces the files: [messy-geo-study-data.tsv](data/messy-geo-study-data.tsv) and [geo-pheno-data.RData](data/geo-pheno-data.RData). The comments and code should make it clear how data were extracted.
+2. [edit-geo-study-data.R](scripts/edit-geo-study-data.R) - This script takes the data generated from [search-geo.R](scripts/search-geo.R) and manually edits any variables that need clarification or can't be directly extracted using [geograbi](https://github.com/yousefi138/geograbi).
+
+__Identified studies can be found in [subset-cleaned-study-data.xlsx](data/subset-cleaned-study-data.xlsx)__. 
+
+Note: Only psoriasis data were found.
 
 ## ArrayExpress
 
