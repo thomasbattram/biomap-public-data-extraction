@@ -40,6 +40,14 @@ Note: Searching with the inital searchbox available here: https://www.ebi.ac.uk/
 
 Below are the summaries of the results of each search because the website does not enable you to download query results like ArrayExpress.
 
+### Search for specific studies/methylation
+
+* LBC. [EGA link](https://ega-archive.org/datasets/EGAD00010000604). Unclear whether they have data on eczema or psoriasis (checked cohort profile and for publications and found nothing) .
+* Lifelines-DEEP. [EGA link](https://ega-archive.org/studies/EGAS00001001704). This cohort has DNAm data, but it's not listed on EGA. Think they have eczema data as they contributed to [Shared genetic origin of asthma, hay fever and eczema elucidates allergic disease biology](https://www.nature.com/articles/ng.3985).
+* Understanding society. [EGA link](https://ega-archive.org/studies/EGAS00001002836). Doesn't look as though they have eczema or psoriasis data (searched the [CLOSER search engine](https://discovery.closer.ac.uk/)).
+* Canadian Biobank on Respiratory and Allergic diseases (COBRA). [EGA link](https://ega-archive.org/studies/EGAS00001003103). They have data on eczema along with 167 whold blood 450k samples and 24 eosinophil 450k samples.
+* BLUEPRINT. [EGA link](https://ega-archive.org/dacs/EGAC00001000135).
+
 ### Search results for "eczema"
 
 Only one study: ["Skin Microbiome in Disease States: Atopic Dermatitis and Immunodeficiency"](https://ega-archive.org/studies/phs000266). Study is just assessing differences in microbiota between individuals. Data is on dbGaP, study ID = [phs000266](https://www.ncbi.nlm.nih.gov/projects/gap/cgi-bin/study.cgi?study_id=phs000266.v4.p1)
@@ -58,3 +66,6 @@ Only one study: ["Skin Microbiome in Disease States: Atopic Dermatitis and Immun
 
 One dataset was also present in the results of the query - Psoriasis cases as part of WTCCC2 phase 2. What was in the dataset was not totally clear, but it's likely basic phenotype (psoriasis case/control status) and genotype. Sample size = 2622. Need to contact someone about getting access to the data, more details [HERE](https://ega-archive.org/datasets/EGAD00010000124).
 
+## dbgap
+
+Found no results of relevance.
