@@ -68,4 +68,4 @@ One dataset was also present in the results of the query - Psoriasis cases as pa
 
 ## dbgap
 
-Found no results of relevance.
+Found no results of relevance - searched for "eczema", "atopic dermatitis", "psoriasis", "methylation".
